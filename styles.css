@@ -205,9 +205,6 @@ button {
     margin-top: 2em;
 }
 
-button:hover {
-    box-shadow: 1px 1px 50px 30px #0ff;
-}
 
 
 
@@ -291,5 +288,9 @@ font-weight: 800;}
  .container {
     margin: 1rem;
  }
+ button:hover {
+    box-shadow: 1px 1px 50px 30px #0ff;
+}
+
 
   }
