@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root {
+    /* change depending on file */
+
+    /* colors */
+    /* primary */
+    --cyan: 193 38% 86%;
+    --neon: 150 100% 66%;
+    /* neutral */
+    --GB: 217 19% 38%;
+    --DGB: 217 19% 24%;
+    --DB: 218 23% 16%;
+
+    /* font */
+    --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
+    --fs-800: 3.5rem;
+    --fs-700: 2rem;
+    --fs-600: 1.5rem;
+    --fs-500: 1rem;
+    --fs-400: 0.9375rem;
+    --fs-300: 1rem;
+    --fs-200: 0.875rem;
+
+    /* font families */
+
+}
+
+
+@media (min-width: 35em) {
+    :root {
+        --fs-800: 5rem;
+        --fs-700: 2.5rem;
+        --fs-600: 1.5rem;
+        --fs-500: 1.25rem;
+        --fs-400: 1rem;
+    }
+}
+
+@media (min-width: 45em) {
+    :root {
+        /* font-sizes */
+        --fs-800: 6.25rem;
+        --fs-700: 3.5rem;
+        --fs-600: 1.5rem;
+        --fs-500: 1.75rem;
+        --fs-400: 1.125rem;
+    }
+}
+
+/* Reset start*/
+
+
+/* box sizing */
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+/* reset margins */
+body, h1, h2, h3, h4, h5, p, figure, picture {
+    margin: 0;
+    padding: 0;
+
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+
+/* Body set-up */
+body {
+    font-weight: 800;
+    background-color: hsl(var(--DB));
+    color: hsl(var(--GB));
+    line-height: 1.5;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: min-content 1fr;
+    font-family: 'Manrope', sans-serif;
+    user-select: none;
+    padding-top: 8rem;
+    /* overflow: hidden; */
+}
+
+/* make images easier to work with */
+img, picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* make forms elements to work with */
+input, button, textarea, select {
+    font: inherit
+}
+
+/* Very important */
+/* remove animation */ 
+@media (prefers-reduced-motion: reduce) {
+    *, *::after, *::before {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;  
+    }
+}
+
+
+/* reset finished */
+
+
+/* Utility classes*/
+
+.flex {
+    display: flex;
+    gap: var(--gap, .5rem);
+    
+}
+
+.flexD{
+    flex-direction: column;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+}
+
+.d-block {
+    display: block;
+}
+
+.flow > * + * {
+    /* the lobotomized owl simply means that it's looking for child that has a sibling before it. AKA not the first child  */
+    margin-top: var(--flow-space, 1rem);
+   
+}
+
+.flow-space--small {
+    --flow-space: 1rem;
+}
+
+.container {
+    margin-top: 2rem;
+    padding-inline: 1em;
+    padding-block: 2em;
+    max-width: 35rem;
+    min-width: 20em;
+    margin:1rem;
+    border: none;
+    border-radius: 1em;
+    background-color: hsl(var(--DGB));
+    text-align: center;
+    position: relative;
+    justify-content: center;
+    box-shadow: 10px 10px 50px -1px rgba(0,0,0,0.29);
+    
+    
+    /* important for controlling the spacing inside of a container */
+}
+
+.advice {
+    color: hsl(var(--neon));
+    font-size: .7rem;
+
+}
+
+.info {
+    color: hsl(var(--cyan));
+    font-size: 1.5rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.padding-inline {
+    padding-inline: 1rem;
+    justify-content: space-between;
+}
+
+.padding-block {
+    padding-block: 1rem;
+}
+
+button {
+    position: absolute;
+    bottom:-35px;
+    width: 4em;
+    aspect-ratio: 1;
+    border: none;
+    border-radius: 50%;
+    background-color: hsl(var(--neon));
+    background-image: url(./images/icon-dice.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    margin-top: 2em;
+}
+
+button:hover {
+    box-shadow: 1px 1px 50px 30px #0ff;
+}
+
+
+
+
+/* colors */
+
+.bg-blue {background-color: hsl(var(--blue));
+}
+.bg-accent {background-color: hsl(var(--lightblue));}
+.bg-white {background-color: hsl(var(--white));}
+
+.text-dark {color: hsl(var(--Verydarkblue));
+font-weight: 800;}
+.text-accent {color: hsl(var(--));}
+.text-white {color: hsl(var(--white));}
+
+/* typography */
+
+.ff-serif { font-family: var(--ff-serif); } 
+.ff-sans-cond { font-family: var(--ff-sans-cond); } 
+.ff-sans-normal { font-family: var(--ff-sans-normal); } 
+
+.letter-spacing-1 { letter-spacing: 4.75px; } 
+.letter-spacing-2 { letter-spacing: 2.7px; } 
+.letter-spacing-3 { letter-spacing: 2.35px; } 
+
+.uppercase { text-transform: uppercase; }
+
+.fs-900 { font-size: var(--fs-900); }
+.fs-800 { font-size: var(--fs-800); }
+.fs-700 { font-size: var(--fs-700); }
+.fs-600 { font-size: var(--fs-600); }
+.fs-500 { font-size: var(--fs-500); }
+.fs-400 { font-size: var(--fs-400); }
+.fs-300 { font-size: var(--fs-300); }
+.fs-200 { font-size: var(--fs-200); }
+
+
+.fs-900,
+.fs-800,
+.fs-700,
+.fs-600 {
+    line-height: 1.1;
+}
+
+
+
+
+.post {
+    color: hsl(var(--Darkgrayishblue));
+    font-weight: 800;
+    text-decoration: none;
+}
+
+
+
+
+.attribution {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10%; 
+    font-size: 1.5rem;
+    position: absolute;
+
+
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media only screen and (min-width: 600px) {
+    body {
+        justify-content: center;
+        padding-top: 0;
+    }
+    main {
+        margin-inline: auto;
+        margin-block: 5rem;
+        max-width: 40rem;
+        border-radius: 1rem;
+        
+    }
+ .container {
+    margin: 1rem;
+ }
+
+  }
