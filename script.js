@@ -11,7 +11,9 @@ window.onload = () => {
 };
 
 button.addEventListener('click', () => {
+    reload();
     getData();
+
 });
 
 
@@ -32,6 +34,15 @@ function getData() {
         });
     };
 
+
+
+    function reload() {
+        button.classList.add("reload");
+        setTimeout(() => {
+            button.classList.remove("reload");
+        }, 1000)
+    
+    };
     // const button = document.querySelector('button');
     // const adviceNumber = document.querySelector('#number');
     // const adviceInfo = document.querySelector('#advice');
